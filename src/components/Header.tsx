@@ -3,6 +3,9 @@ import { ShoppingBag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useCart } from '@/contexts/CartContext';
 
+// 1. Importar a imagem do logo que você adicionou na pasta 'assets'
+import logoImage from '@/assets/logoheader.png';
+
 interface HeaderProps {
   onCartClick: () => void;
 }
@@ -33,9 +36,16 @@ export const Header = ({ onCartClick }: HeaderProps) => {
       }`}
     >
       <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <h1 className="text-2xl md:text-3xl font-quicksand font-bold text-chocolate">
-          Sweet Sophia
-        </h1>
+        
+        {/* --- ALTERAÇÃO AQUI --- */}
+        {/* 2. Substituir o texto H1 pela imagem do logo */}
+        <a href="/" className="cursor-pointer">
+          <img 
+            src={logoImage} 
+            alt="Logo Sweet Sophia" 
+            className="h-[80px] w-auto" // Você pode ajustar o 'h-12' para o tamanho que preferir (ex: h-10, h-14)
+          />
+        </a>
 
         <div className="hidden md:flex items-center gap-8">
           <button

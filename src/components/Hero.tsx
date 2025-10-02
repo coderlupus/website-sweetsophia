@@ -10,7 +10,7 @@ export const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center bg-gradient-to-br from-primary via-primary to-pink-soft wave-divider overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center bg-gradient-to-br from-primary via-primary to-pink-soft overflow-hidden">
       <div className="container mx-auto px-6 py-24 md:py-32 grid md:grid-cols-2 gap-12 items-center relative z-10">
         <div className="animate-fade-in">
           <h2 className="text-5xl md:text-7xl font-quicksand font-bold text-chocolate mb-6">

@@ -3,6 +3,7 @@ import { Product } from '@/contexts/CartContext';
 import traditionalBrownie from '@/assets/traditional-brownie.jpg';
 import specialBrownie from '@/assets/special-brownie.jpg';
 
+// Voltando para a lista com os dois produtos originais
 const products: Product[] = [
   {
     id: '1',
@@ -29,9 +30,14 @@ export const Products = () => {
           Cada brownie é cuidadosamente feito à mão com ingredientes premium para uma experiência inesquecível.
         </p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        {/* --- ALTERAÇÃO AQUI --- */}
+        {/* Trocamos 'grid' por 'flex' e adicionamos 'justify-center' para centralizar */}
+        <div className="flex flex-wrap justify-center gap-8 max-w-5xl mx-auto">
           {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            // Adicionei uma largura para os cards não esticarem demais
+            <div className="w-full max-w-sm" key={product.id}>
+              <ProductCard product={product} />
+            </div>
           ))}
         </div>
       </div>
