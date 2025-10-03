@@ -1,73 +1,43 @@
-# Welcome to your Lovable project
+# Sweet Sophia Website
 
-## Project info
+Este projeto é um boilerplate moderno de e-commerce para a Sweet Sophia, focado na venda de brownies artesanais. Foi construído com as mais recentes tecnologias do ecossistema React.
 
-**URL**: https://lovable.dev/projects/4fee4dfc-7b5d-4398-a94b-4581318b7f0d
+## Tecnologias Utilizadas
 
-## How can I edit this code?
+* **Frontend Framework**: React com TypeScript
+* **Build Tool**: Vite
+* **Estilização**: Tailwind CSS com classes utilitárias personalizadas.
+* **Componentes UI**: Componentes acessíveis e customizáveis baseados em [shadcn/ui](https://ui.shadcn.com/) e Radix Primitives (ex: `Dialog`, `Drawer`, `Carousel`, `Toggle`, etc.).
+* **Rotas**: `react-router-dom`
+* **Outras Bibliotecas**: Gerenciamento de estado de carrinho (Custom Context), `sonner` para notificações.
 
-There are several ways of editing your application.
+## Configuração e Desenvolvimento
 
-**Use Lovable**
+### Pré-requisitos
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/4fee4dfc-7b5d-4398-a94b-4581318b7f0d) and start prompting.
+Você precisa ter o Node.js e o npm (ou um gerenciador de pacotes compatível como Yarn ou Bun) instalados.
 
-Changes made via Lovable will be committed automatically to this repo.
+### Primeiros Passos
 
-**Use your preferred IDE**
+1.  **Instale as dependências:**
+    ```bash
+    npm install
+    ```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+2.  **Inicie o servidor de desenvolvimento:**
+    ```bash
+    npm run dev
+    ```
+    O aplicativo será iniciado em `http://localhost:8080` (ou em uma porta diferente se a 8080 estiver em uso).
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Estrutura do Projeto
 
-Follow these steps:
+* `src/pages/Index.tsx`: A página principal que agrega todos os componentes da landing page (`Header`, `Hero`, `Products`, `About`, `Footer`).
+* `src/components/`: Contém os componentes principais da aplicação.
+* `src/components/ui/`: Componentes UI base do shadcn/ui.
+* `src/contexts/CartContext.tsx`: Lógica e estado para o carrinho de compras.
+* `src/index.css`: Definição de tokens de design e cores usando variáveis CSS (HSL) para dar suporte ao modo claro/escuro.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## Agradecimentos
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/4fee4dfc-7b5d-4398-a94b-4581318b7f0d) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Este projeto foi desenvolvido com a assistência de inteligência artificial da plataforma **Lovable**, que ajudou na estruturação inicial do código, integração de bibliotecas e refatoração de componentes.
