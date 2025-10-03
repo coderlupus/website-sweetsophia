@@ -25,7 +25,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
         />
       </div>
       <div className="p-6">
-        <h3 className="text-xl font-quicksand font-semibold text-chocolate mb-2">
+        <h3 className="text-xl font-quicksand font-semibold text-chocolate mb-2 min-h-[3.5rem]">
           {product.name}
         </h3>
         <p className="text-2xl font-bold text-accent mb-4">R$ {product.price}</p>
