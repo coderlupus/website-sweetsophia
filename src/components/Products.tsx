@@ -3,21 +3,20 @@
 import { ProductCard } from './ProductCard';
 import { Product } from '@/contexts/CartContext';
 import traditionalBrownie from '@/assets/traditional-brownie.jpg';
-import specialBrownie from '@/assets/special-brownie.jpg';
+import specialBrownie from '@/assets/special-brownie.jpg'; // Assuming this image is suitable for marmitinhas and fatias too
 
 // Estrutura para agrupar produtos por categoria
-const productsData: { 
-  title: string; 
-  subtitle: string; 
+const productsData: {
+  title: string;
+  subtitle: string;
   list: Product[];
-  // Removida a propriedade 'cta' da interface para simplificar
 }[] = [
   {
-    title: 'Brownie Tradicional (Base)',
+    title: 'Brownie Tradicional',
     subtitle: 'Nosso clássico, sem recheio. Perfeito para acompanhar um café ou adicionar o seu toque especial.',
     list: [
       {
-        id: '1-base',
+        id: '1-tradicional', // Changed ID for clarity
         name: 'Brownie Tradicional',
         price: 7.00,
         image: traditionalBrownie,
@@ -26,25 +25,36 @@ const productsData: {
   },
   {
     title: 'Brownie com Recheio',
-    subtitle: 'O Brownie com a textura perfeita, recheado com os seus sabores favoritos. R$ 12,00 cada.',
+    subtitle: 'O Brownie com a textura perfeita, recheado com os seus sabores favoritos.',
     list: [
-      { id: '1-ninho', name: 'Ninho', price: 12.00, image: traditionalBrownie },
-      { id: '1-ninho-nutella', name: 'Ninho com Nutella', price: 12.00, image: traditionalBrownie },
-      { id: '1-brigadeiro', name: 'Brigadeiro', price: 12.00, image: traditionalBrownie },
-      { id: '1-dois-amores', name: 'Dois Amores', price: 12.00, image: traditionalBrownie },
+      { id: '1-ninho', name: 'Recheio Ninho', price: 12.00, image: traditionalBrownie }, // Added "Recheio" prefix for clarity
+      { id: '1-ninho-nutella', name: 'Recheio Ninho com Nutella', price: 12.00, image: traditionalBrownie },
+      { id: '1-brigadeiro', name: 'Recheio Brigadeiro', price: 12.00, image: traditionalBrownie },
+      { id: '1-dois-amores', name: 'Recheio Dois Amores', price: 12.00, image: traditionalBrownie },
     ],
-    // Removida a propriedade 'cta' que estava aqui
   },
   {
     title: 'Marmitinhas',
-    subtitle: 'Marmitinhas prontas com a combinação perfeita para presentear ou para o seu lanche. R$ 15,00 cada.',
+    subtitle: 'Marmitinhas prontas com a combinação perfeita para presentear ou para o seu lanche.',
     list: [
-      { id: '2-dois-amores', name: 'Marmitinha - Dois Amores', price: 15.00, image: specialBrownie },
-      { id: '2-brigadeiro', name: 'Marmitinha - Brigadeiro', price: 15.00, image: specialBrownie },
-      { id: '2-ninho', name: 'Marmitinha - Ninho', price: 15.00, image: specialBrownie },
-      { id: '2-ninho-nutella', name: 'Marmitinha - Ninho com Nutella', price: 15.00, image: specialBrownie },
+      { id: '2-dois-amores', name: 'Marmitinha Dois Amores', price: 15.00, image: specialBrownie }, // Added "Marmitinha" prefix
+      { id: '2-brigadeiro', name: 'Marmitinha Brigadeiro', price: 15.00, image: specialBrownie },
+      { id: '2-ninho', name: 'Marmitinha Ninho', price: 15.00, image: specialBrownie },
+      { id: '2-ninho-nutella', name: 'Marmitinha Ninho com Nutella', price: 15.00, image: specialBrownie },
     ],
   },
+  // --- NEW CATEGORY ADDED ---
+  {
+    title: 'Fatia Brownie',
+    subtitle: 'Uma fatia generosa do nosso delicioso brownie com coberturas incríveis.',
+    list: [
+      { id: '3-dois-amores', name: 'Fatia Brownie Dois Amores', price: 18.00, image: specialBrownie }, // Added "Fatia Brownie" prefix, assuming specialBrownie image works here
+      { id: '3-brigadeiro', name: 'Fatia Brownie Brigadeiro', price: 18.00, image: specialBrownie },
+      { id: '3-ninho', name: 'Fatia Brownie Ninho', price: 18.00, image: specialBrownie },
+      { id: '3-ninho-nutella', name: 'Fatia Brownie Ninho com Nutella', price: 18.00, image: specialBrownie },
+    ],
+  },
+  // --- END OF NEW CATEGORY ---
 ];
 
 export const Products = () => {
@@ -72,23 +82,19 @@ export const Products = () => {
               {/* Lista de Produtos do Grupo */}
               <div className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto">
                 {group.list.map((product) => (
-                  <div 
-                    // Classe de controle do tamanho (5 cards no xl)
-                    className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-[20%] max-w-[250px]" 
+                  <div
+                    // Classe de controle do tamanho (pode ajustar conforme necessário)
+                    className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-[20%] max-w-[250px]"
                     key={product.id}
                   >
                     <ProductCard product={product} />
                   </div>
                 ))}
               </div>
-
-              {/* OBSERVAÇÃO: A lógica de renderização do CTA foi removida aqui, 
-                  garantindo que ele não será exibido. */}
-
             </div>
           ))}
         </div>
-        
+
       </div>
     </section>
   );
