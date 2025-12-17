@@ -1,43 +1,79 @@
-# Sweet Sophia Website
+# 🍰 Sweet Sophia
 
-Este projeto é um boilerplate moderno de e-commerce para a Sweet Sophia, focado na venda de brownies artesanais. Foi construído com as mais recentes tecnologias do ecossistema React.
+A modern, elegant landing page and e-commerce MVP designed for a boutique brownie and sweets shop. This application focuses on providing a premium visual experience while offering essential shopping functionalities through a responsive interface.
 
-## Tecnologias Utilizadas
+## ✨ Features
 
-* **Frontend Framework**: React com TypeScript
-* **Build Tool**: Vite
-* **Estilização**: Tailwind CSS com classes utilitárias personalizadas.
-* **Componentes UI**: Componentes acessíveis e customizáveis baseados em [shadcn/ui](https://ui.shadcn.com/) e Radix Primitives (ex: `Dialog`, `Drawer`, `Carousel`, `Toggle`, etc.).
-* **Rotas**: `react-router-dom`
-* **Outras Bibliotecas**: Gerenciamento de estado de carrinho (Custom Context), `sonner` para notificações.
+* **Visual-First Design**: A captivating Hero section and layout designed to highlight the artisanal quality of the products.
+* **Product Showcase**: specialized catalog for brownies and sweets with detailed cards.
+* **Shopping Cart System**: Integrated cart functionality allowing users to add items and manage quantities seamlessly.
+* **Responsive UI**: Fully optimized for mobile and desktop devices using **Tailwind CSS**.
+* **Modern Components**: Built with **Shadcn UI** primitives for accessible and robust interactive elements (Sheet, Dialogs, etc.).
 
-## Configuração e Desenvolvimento
+## 🛠 Tech Stack
 
-### Pré-requisitos
+* **Core**: React 18, TypeScript, Vite
+* **Styling**: Tailwind CSS, Shadcn UI, Lucide React (Icons)
+* **State Management**: React Context API
+* **Build Tool**: Bun / Vite
 
-Você precisa ter o Node.js e o npm (ou um gerenciador de pacotes compatível como Yarn ou Bun) instalados.
+## 🚀 Getting Started
 
-### Primeiros Passos
+### Prerequisites
 
-1.  **Instale as dependências:**
+* Node.js (v18+) or Bun
+
+### Installation
+
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/your-username/website-sweetsophia.git](https://github.com/your-username/website-sweetsophia.git)
+    cd website-sweetsophia
+    ```
+
+2.  **Install dependencies:**
     ```bash
     npm install
+    # or
+    bun install
     ```
 
-2.  **Inicie o servidor de desenvolvimento:**
+3.  **Run the development server:**
     ```bash
     npm run dev
+    # or
+    bun dev
     ```
-    O aplicativo será iniciado em `http://localhost:8080` (ou em uma porta diferente se a 8080 estiver em uso).
 
-## Estrutura do Projeto
+## 📂 Project Structure
 
-* `src/pages/Index.tsx`: A página principal que agrega todos os componentes da landing page (`Header`, `Hero`, `Products`, `About`, `Footer`).
-* `src/components/`: Contém os componentes principais da aplicação.
-* `src/components/ui/`: Componentes UI base do shadcn/ui.
-* `src/contexts/CartContext.tsx`: Lógica e estado para o carrinho de compras.
-* `src/index.css`: Definição de tokens de design e cores usando variáveis CSS (HSL) para dar suporte ao modo claro/escuro.
+* `src/components`:
+  * `ui/`: Reusable accessible components (Shadcn).
+  * `Hero.tsx`, `Products.tsx`, `About.tsx`: Main landing page sections.
+  * `Cart.tsx`: Shopping cart logic and UI.
+* `src/contexts`: Global state (CartContext).
+* `src/assets`: Static images and resources.
 
-## Agradecimentos
+---
 
-Este projeto foi desenvolvido com a assistência de inteligência artificial da plataforma **Lovable**, que ajudou na estruturação inicial do código, integração de bibliotecas e refatoração de componentes.
+## 🛠 Technical Improvements & Future Vision
+
+This project was developed as a high-fidelity MVP to validate the brand's online presence. To prepare this application for a production launch and ensure long-term scalability, the following steps are planned:
+
+### 🎨 Content & Assets Strategy
+* **Placeholder Imagery**: The images currently used in the application are high-quality placeholders for demonstration purposes. The production roadmap includes replacing these with **professional photography of the actual products** to ensure brand authenticity and accurate user expectations.
+* **Brand Identity**: Refinement of the color palette and typography to strictly match the client's final branding guidelines.
+
+### 🏗 Architecture & Data
+* **Headless CMS Integration**: Move product data from hardcoded files to a CMS (like **Sanity** or **Strapi**). This will allow the business owner to update flavors, prices, and photos without touching the code.
+* **Checkout Flow**: Currently, the cart serves as a selection tool. The next phase involves implementing a checkout redirection (via WhatsApp API) or a full payment gateway integration (Stripe/Mercado Pago).
+
+### 🚀 Performance & SEO
+* **Image Optimization**: Implementation of `next/image` (if migrating to Next.js) or modern formats (AVIF/WebP) to ensure fast loading times, which is critical for image-heavy food websites.
+* **SEO Metadata**: Adding proper Open Graph tags and structured data (JSON-LD) for "Local Business" and "Product" to improve visibility on Google Maps and search results.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
