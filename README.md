@@ -58,7 +58,7 @@ A modern, elegant landing page and e-commerce MVP designed for a boutique browni
 
 ## 🛠 Technical Improvements & Future Vision
 
-This project was developed as a high-fidelity MVP to validate the brand's online presence. To prepare this application for a production launch and ensure long-term scalability, the following steps are planned:
+This project was developed as a project for a friend to validate the brand's online presence. To prepare this application for a production launch and ensure long-term scalability, the following steps are needed:
 
 ### 🎨 Content & Assets Strategy
 * **Placeholder Imagery**: The images currently used in the application are high-quality placeholders for demonstration purposes. The production roadmap includes replacing these with **professional photography of the actual products** to ensure brand authenticity and accurate user expectations.
